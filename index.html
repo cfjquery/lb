@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="css/boss.css" />
+	<script type="text/javascript" src="js/cordova-2.3.0.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="js/lawnchair.js"></script>
+	<!-- Add PhoneGap script here -->
+	<script type="text/javascript">
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+		}
+	</script>
+</head>
+<body>
+	<h1>LOU Boss Raid Calculator</h1>
+	<div data-role="page" id="calculator" data-theme="a">
+		<div data-role="header" class="header-docs">
+			<div id="headerDiv">&nbsp;LoU Boss Raid Calculator</div>
+		</div>
+		<div id="primaryDiv" data-role="content-primary" align="center">
+			<form name="bossForm">
+			    <fieldset id="bossRow" data-role="controlgroup" data-type="horizontal" data-mini="true">
+			    </fieldset>
+				<div id="btnLevelTopRow" data-role="controlgroup" data-type="horizontal" data-mini="true">
+				</div>
+				<div id="btnLevelBottomRow" data-role="controlgroup" data-type="horizontal" data-mini="true">
+				</div>
+				<div class="ui-grid-a">
+				    <div class="ui-block-a">
+					    <fieldset id="radioLandTroops" data-role="controlgroup" data-mini="true">
+					    </fieldset>
+					    <fieldset id="radioSeaTroops" data-role="controlgroup" data-mini="true">
+					    </fieldset>
+					</div>
+				    <div class="ui-block-b">
+				    	<table>
+				    		<tr><td id="description1"></td></tr>
+				    		<tr><td id="description2"></td></tr>
+				    	</table>
+				    	<table>
+				    		<tr><td align="right">100% Kill</td><td id="guaranteed" class="results"></td></tr>
+				    		<tr><td align="right">75% Kill</td><td id="seventyFive" class="results"></td></tr>
+				    		<tr><td align="right">50% Kill</td><td id="fifty" class="results"></td></tr>
+				    		<tr><td align="right">25% Kill</td><td id="twentyFive" class="results"></td></tr>
+				    	</table>
+				    </div>
+				</div>
+			</form>
+		</div>
+		<div id="footerDiv"></div>
+		<div data-role="footer" data-id="footerMenu" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a id="menuCalc" href="#calculator">Calc</a></li>
+					<li><a id="menuResearch" href="#research">Research</a></li>
+					<li><a id="menuHelp" href="#help">Help</a></li>
+					<li><a id="menuAbout" href="#about">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="research" data-theme="a">
+		<div data-role="header" class="header-docs">
+			<div id="headerDiv">&nbsp;LoU Boss Raid Calculator</div>
+		</div>
+		<div id="primaryDiv" data-role="content-primary" align="center">
+			<table id="researchTable">
+			</table>	
+		</div>
+		<div data-role="footer" data-id="footerMenu" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a id="menuCalc" href="#calculator">Calc</a></li>
+					<li><a id="menuResearch" href="#research">Research</a></li>
+					<li><a id="menuHelp" href="#help">Help</a></li>
+					<li><a id="menuAbout" href="#about">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="help" data-theme="a">
+		<div data-role="header" class="header-docs">
+			<div id="headerDiv">&nbsp;LoU Boss Raid Calculator</div>
+		</div>
+		<div id="primaryDiv" data-role="content-primary">
+			It's simple.<br />
+			Choose a Boss, then a Boss Level (1 - 10) and then choose a troop type<br />
+			Then just look at the results for 100,75,50 and 25 percent chance of a kill.
+			<br />
+			Click on Research to input research values, once entered they are remembered :)
+			<br />
+			That's it :)
+		</div>
+		<div data-role="footer" data-id="footerMenu" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a id="menuCalc" href="#calculator">Calc</a></li>
+					<li><a id="menuResearch" href="#research">Research</a></li>
+					<li><a id="menuHelp" href="#help">Help</a></li>
+					<li><a id="menuAbout" href="#about">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="about" data-theme="a">
+		<div data-role="header" class="header-docs">
+			<div id="headerDiv">&nbsp;LoU Boss Raid Calculator</div>
+		</div>
+		<div id="primaryDiv" data-role="content-primary" align="center">
+				<div class="ui-grid-a">
+				    <div class="ui-block-a">
+				    	<div class="ui-bar ui-bar-a" style="height:210px">
+				    		<br/><br/><br/><br/>
+				    		Brought to you
+				    	</div>
+					</div>
+				    <div class="ui-block-b">
+				    	<div class="ui-bar ui-bar-a" style="height:210px">
+				    		<br/><br/><br/><br/>
+				    		by
+				    	</div>
+				    </div>
+				    <div class="ui-block-a">
+				    	<div class="ui-bar ui-bar-a" style="height:210px">
+				    		<br/><br/><br/><br/><br/>
+				    		cfJquery
+				    	</div>
+					</div>
+				    <div class="ui-block-b">
+				    	<div class="ui-bar ui-bar-a" style="height:210px">
+				    		<br/><br/><br/><br/>
+				    		<img src="image/cfjquery.png">
+				    	</div>
+				    </div>
+				</div>
+		</div>
+		<div data-role="footer" data-id="footerMenu" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a id="menuCalc" href="#calculator">Calc</a></li>
+					<li><a id="menuResearch" href="#research">Research</a></li>
+					<li><a id="menuHelp" href="#help">Help</a></li>
+					<li><a id="menuAbout" href="#about">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
